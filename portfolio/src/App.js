@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   ChakraProvider,
   Flex,
@@ -7,17 +7,17 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
   Box,
   keyframes,
-} from '@chakra-ui/react';
-import Logo from './Components/Logo/Logo';
-import { motion } from 'framer-motion';
-import Typed from 'react-typed';
-import Navbar from './Components/Navbar/Navbar';
-import { MotionConfig } from 'framer-motion';
-import Loader from './Components/Loader/Loader';
-import Header from './Components/Header/Header';
+} from "@chakra-ui/react";
+import Logo from "./Components/Logo/Logo";
+import { motion } from "framer-motion";
+import Typed from "react-typed";
+import Navbar from "./Components/Navbar/Navbar";
+import { MotionConfig } from "framer-motion";
+import Loader from "./Components/Loader/Loader";
+import Header from "./Components/Header/Header";
+import theme from "./theme";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -33,10 +33,10 @@ function App() {
         <Loader />
       ) : (
         <ChakraProvider theme={theme}>
-          <Flex flexDirection="column" bgColor="#171923" h="100vh">
+          <Flex flexDirection="column" bgColor="#171923" h="100vh" p={0} m={0}>
             <Navbar />
-            <Box p={1}>
-            <Header/>
+            <Box>
+              <Header />
             </Box>
           </Flex>
         </ChakraProvider>

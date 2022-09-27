@@ -1,18 +1,18 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
-import React from 'react';
-import Typed from 'react-typed';
-import video from '../../assets/background.mp4';
-import '../Logo/logo.css';
+import { Box, Flex, Text } from "@chakra-ui/react";
+import React from "react";
+import Typed from "react-typed";
+import video from "../../assets/background.mp4";
+import "../Logo/logo.css";
 const Header = () => {
   return (
-    <div style={{ width: '100%', height: '100vh' }}>
+    <div style={{ width: "100%", height: "100vh" }}>
       {/* <div className="overlay"></div> */}
       <video
         style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          opacity: 0.5,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          opacity: 1,
         }}
         src={video}
         autoPlay
@@ -23,7 +23,7 @@ const Header = () => {
         <Text as="h1">
           Hi, my name is Hernan
           <Typed
-            strings={['Full Stack Web ', 'Node.js', 'MERN', 'React.js']}
+            strings={["Full Stack Web ", "Node.js", "MERN", "React.js"]}
             typeSpeed={150}
             backSpeed={50}
             loop

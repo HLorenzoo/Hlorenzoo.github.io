@@ -1,14 +1,18 @@
-import { Box, Text } from '@chakra-ui/react';
-import React from 'react';
-import './logo.css';
+import { Box, Text } from "@chakra-ui/react";
+import React from "react";
+import "./logo.css";
 const Logo = () => {
-  const hl = 'HL';
+  const hl = "HL";
   return (
-    <Box className="rainbow">
+    <Box
+      className="rainbow"
+      h={{ base: "5px", md: "10px" }}
+      w={{ base: "5px", md: "10px" }}
+    >
       <Text
         color="white"
         fontFamily="monospace"
-        fontSize="25px"
+        fontSize={{ base: "25px" }}
         fontWeight="extrabold"
         transform="rotate(-45deg)"
       >
