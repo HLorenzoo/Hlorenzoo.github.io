@@ -6,7 +6,6 @@ import DrawerSectionm from "./Drawer/Drawer";
 const SideBar = () => {
   return (
     <Box display={{ md: "none" }}>
-      {/* <DrawerMenu /> */}
       <DrawerSectionm />
     </Box>
   );
