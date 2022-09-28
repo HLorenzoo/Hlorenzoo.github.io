@@ -4,47 +4,66 @@ import Typed from "react-typed";
 import video from "../../assets/background.mp4";
 import "../Logo/logo.css";
 import "../../index.css";
+import { motion } from "framer-motion";
+
 const Header = () => {
   return (
-    <div style={{ width: "100%", height: "100%" }}>
-      {/* <div className="overlay"></div> */}
-      <video
-        style={{
-          width: "100%",
-          height: "70%",
-          objectFit: "fill",
-          opacity: 0.7,
-        }}
-        src={video}
-        autoPlay
-        loop
-        muted
-      />
+    <div style={{ width: "100%", height: "70%" }}>
+      <motion.div
+        style={{ width: "100%", height: "100%" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+      >
+        <video
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "fill",
+            opacity: 0.5,
+          }}
+          src={video}
+          autoPlay
+          loop
+          muted
+        />
+      </motion.div>
+
       <Flex className="content" pt={{ base: "30px", md: "100px" }}>
-        <Flex
-          flexDirection="column"
-          alignItems={"center"}
-          pl={{ base: "25px", md: "100px" }}
-        >
+        <Flex flexDirection="column" pl={{ base: "25px", md: "250px" }}>
           <Text
+            as={motion.p}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className="sf"
             color="#19b1ff"
-            as="h1"
+            transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 1.3s"
             fontWeight="bold"
-            fontSize={{ base: "15px", md: "18px" }}
+            fontSize={{ base: "15px", md: "1.5rem" }}
           >
             Hello World! My name is
           </Text>
           <Text
-            as="h1"
+            as={motion.p}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 1.8s"
             color="white"
-            fontSize={{ base: "40px", md: "45px" }}
+            fontSize={{ base: "40px", md: "5rem" }}
             className="calibre"
           >
             Hernan Lorenzo.
           </Text>
           <Flex flexDirection="row">
-            <Text as="h1" color="white" fontSize="30px" className="calibre">
+            <Text
+              as={motion.p}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 2.2s"
+              color="white"
+              fontSize="2.5rem"
+              className="calibre"
+            >
               <small style={{ color: "#19b1ff" }}>
                 <Typed
                   className="sf"
@@ -65,15 +84,17 @@ const Header = () => {
           </Flex>
           <Text
             pt={{ md: "15px" }}
-            as="h1"
+            as={motion.p}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 2.5s"
             color="white"
             w={{ base: "100%", md: "50%" }}
             className="sf"
-            fontSize={{ base: "15px", md: "18px" }}
+            fontSize={{ base: "15px", md: "1.5rem" }}
           >
             I'm an Argentinian software developer with a goal-driven creative
-            mindset and passion for learning and innovating. Currently ending a
-            Bootcamp from Plataforma 5.
+            mindset
           </Text>
         </Flex>
         <span class="cloud">

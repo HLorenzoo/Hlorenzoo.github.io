@@ -13,11 +13,11 @@ const DrawerSectionm = () => {
   function handleBackdropClick() {
     setDrawerOpen(false);
   }
-
+  console.log(drawerOpen);
   return (
     <div>
       <SlideDrawer show={drawerOpen} />
-      {drawerOpen && <Backdrop closeDrawer={handleBackdropClick} />}
+      {/* {drawerOpen && <Backdrop closeDrawer={handleBackdropClick} />} */}
       <button onClick={handleOpenDrawerButton}>
         <Hamburger
           position="absolute"

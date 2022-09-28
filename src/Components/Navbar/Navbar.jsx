@@ -23,12 +23,12 @@ const Navbar = () => {
     <>
       <Box
         as={motion.div}
-        initial={{ y: "50%", opacity: 0, scale: 0 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        className="navbar"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition="1.5s"
         p={4}
+        className="navbar"
         position="sticky"
-        top={0}
       >
         <Flex h={16} alignItems={"center"} justifyContent="space-between">
           <Box className="loader" pl="20px">
