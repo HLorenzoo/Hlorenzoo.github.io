@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Calibre";
+  src:url("./fonts/Calibre-Medium.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "SF";
+  src:url("./fonts/SFMono.ttf");
+  font-weight: bold;
+}
+
+.calibre{
+    font-family: Calibre;
+}
+.sf{
+    font-family: SF;
+}
