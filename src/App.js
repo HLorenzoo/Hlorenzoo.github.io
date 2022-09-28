@@ -35,7 +35,7 @@ function App() {
         <ChakraProvider theme={theme}>
           <Flex flexDirection="column" bgColor="#171923" h="100vh" p={0} m={0}>
             <Navbar />
-            <Box>
+            <Box bgColor="#171923" h="100vh">
               <Header />
             </Box>
           </Flex>

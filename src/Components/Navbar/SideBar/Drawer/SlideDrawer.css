@@ -1,0 +1,19 @@
+.side-drawer {
+  /* In commentaries are the way to make it slide from left to right */
+  position: fixed;
+  height: 90%;
+  background: #222531;
+  top: 96px;
+  right: 0;
+  /* right: 100%; */
+  width: 55%;
+  z-index: 200;
+  /* box-shadow: rgba(0, 0, 0, 0.15) -1.95px -1.95px -2.6px; */
+  box-shadow: -1.95px 1.95px 2.6px 0px rgba(255, 255, 255, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+.side-drawer.open {
+  transform: translateX(0);
+  /* transform: translateX(100%); */
+}

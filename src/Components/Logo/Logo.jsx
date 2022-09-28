@@ -10,8 +10,8 @@ const Logo = () => {
       w={{ base: "5px", md: "10px" }}
     >
       <Text
+        className="sf"
         color="white"
-        fontFamily="monospace"
         fontSize={{ base: "25px" }}
         fontWeight="extrabold"
         transform="rotate(-45deg)"

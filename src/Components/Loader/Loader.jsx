@@ -37,7 +37,14 @@ const animation = `${animationKeyframes} 6s ease-in-out`;
 const Loader = () => {
   const hl = "HL";
   return (
-    <Flex h="100vh" bg="gray.100" justifyContent="center" alignItems="center">
+    <Flex
+      h="100vh"
+      bg="rgba(34, 37, 49, 255)"
+      justifyContent="center"
+      alignItems="center"
+      p={0}
+      m={0}
+    >
       <Box
         as={motion.div}
         animation={animation}
@@ -59,7 +66,7 @@ const Loader = () => {
             color="white"
             fontSize="15px"
             fontWeight="extrabold"
-            fontFamily="'Oswald', sans-serif;"
+            className="sf"
           >
             {hl}
           </ChakraBox>
