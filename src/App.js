@@ -18,6 +18,8 @@ import { MotionConfig } from "framer-motion";
 import Loader from "./Components/Loader/Loader";
 import Header from "./Components/Header/Header";
 import theme from "./theme";
+import AboutMe from "./Components/AboutMe/AboutMe";
+import data from "./data";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -36,7 +38,8 @@ function App() {
           <Flex flexDirection="column" bgColor="#171923" h="100vh" p={0} m={0}>
             <Navbar />
             <Box bgColor="#171923" h="100vh">
-              <Header />
+              <Header data={data} />
+              <AboutMe />
             </Box>
           </Flex>
         </ChakraProvider>

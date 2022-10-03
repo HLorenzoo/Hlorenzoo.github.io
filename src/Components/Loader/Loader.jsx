@@ -18,12 +18,12 @@ import "../Logo/logo.css";
 import { motion, isValidMotionProp, AnimatePresence } from "framer-motion";
 
 const animationKeyframes = keyframes`
-    0% { transform: scale(0.5) rotate(0); }
-    20% { transform: scale(1) rotate(0);  }
-    40% { transform: scale(1.2) rotate(270deg); }
-    60% { transform: scale(1.4) rotate(270deg);  }
-    80% { transform: scale(2) rotate(0);  }
-    100% { transform: scale(0) rotate(0);  }
+    0%{transform: scale(0.5) rotate(0);}
+    20%{transform: scale(1) rotate(0);}
+    40%{transform: scale(1.2) rotate(270deg);}
+    60%{transform: scale(1.4) rotate(270deg);}
+    80%{transform: scale(2) rotate(0);}
+    100%{transform: scale(0) rotate(0);}
   `;
 const ChakraBox = chakra(motion.div, {
   /**
@@ -42,8 +42,7 @@ const Loader = () => {
       bg="rgba(34, 37, 49, 255)"
       justifyContent="center"
       alignItems="center"
-      p={0}
-      m={0}
+      w="100%"
     >
       <Box
         as={motion.div}

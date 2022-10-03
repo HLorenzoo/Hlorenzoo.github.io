@@ -5,8 +5,11 @@ import video from "../../assets/background.mp4";
 import "../Logo/logo.css";
 import "../../index.css";
 import { motion } from "framer-motion";
+import useAppContext from "../../context/context";
 
-const Header = () => {
+const Header = ({ data }) => {
+  const { language, setlanguage } = useAppContext();
+
   return (
     <div style={{ width: "100%", height: "70%" }}>
       <motion.div
@@ -41,7 +44,7 @@ const Header = () => {
             fontWeight="bold"
             fontSize={{ base: "15px", md: "1.5rem" }}
           >
-            Hello World! My name is
+            {data[language].init[0]}
           </Text>
           <Text
             as={motion.p}
@@ -68,11 +71,12 @@ const Header = () => {
                 <Typed
                   className="sf"
                   strings={[
-                    "Full Stack Web",
-                    "Node.js",
+                    "Full Stack",
                     "MERN",
                     "PERN",
+                    "Node.js",
                     "React.js",
+                    "Next.js",
                   ]}
                   typeSpeed={150}
                   backSpeed={50}
@@ -93,8 +97,7 @@ const Header = () => {
             className="sf"
             fontSize={{ base: "15px", md: "1.5rem" }}
           >
-            I'm an Argentinian software developer with a goal-driven creative
-            mindset
+            {data[language].init[3]}
           </Text>
         </Flex>
         <span class="cloud">

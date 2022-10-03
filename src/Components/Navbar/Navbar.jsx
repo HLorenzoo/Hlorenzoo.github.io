@@ -12,9 +12,13 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Typed from "react-typed";
 import "./loader.css";
 import Logo from "../Logo/Logo";
-import ButtonSection from "./Button";
+import ButtonSection from "./ButtonSection";
 import SideBar from "./SideBar/SideBar";
 import { motion, isValidMotionProp, AnimatePresence } from "framer-motion";
+import data from "../../data";
+import Languages from "./SideBar/Languages";
+import DrawerLanguages from "./SideBar/DrawerLanguages";
+import LanguageDrawer from "./SideBar/Drawer/LanguageDrawer";
 const Navbar = () => {
   const hl = "<HL/>";
   const { colorMode, toggleColorMode } = useColorMode();
@@ -35,8 +39,11 @@ const Navbar = () => {
             <Logo />
           </Box>
 
-          <Flex alignItems={"center"}>
-            <ButtonSection />
+          <Flex>
+            <ButtonSection data={data} />
+
+            <LanguageDrawer />
+
             <SideBar />
           </Flex>
         </Flex>

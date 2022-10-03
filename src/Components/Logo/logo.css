@@ -11,65 +11,51 @@
 .font-face-gm {
   font-family: "SF";
 }
-.rainbow {
-  border-radius: 1px;
-  padding: 2rem;
-  margin: auto;
-  transform: rotate(45deg);
-  display: grid;
-  place-content: center;
-  text-align: center;
-
-  font-size: 0.5em;
-
-  --border-size: 0.155rem;
-  border: var(--border-size) solid transparent;
-
-  /* Paint an image in the border */
-  border-image: conic-gradient(
-      from var(--angle),
-      #32fff9 0deg 90deg,
-      #102941 90deg 180deg,
-      #0867a4 180deg 270deg,
-      #05acff 270deg 360deg
-    )
-    1 stretch;
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
-/* Animate when Houdini is available */
-@supports (background: paint(houdini)) {
-  @property --opacity {
-    syntax: "<number>";
-    initial-value: 0.5;
-    inherits: false;
-  }
+.rainbow {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  place-content: center;
+  transform: rotate(45deg);
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 2rem;
+}
+.rainbow::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#32fff9, #32fff9),
+    linear-gradient(#102941, #102941), linear-gradient(#0867a4, #0867a4),
+    linear-gradient(#377af5, #377af5);
+  animation: rotate 4.5s linear infinite;
+}
 
-  @property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-
-  @keyframes opacityChange {
-    to {
-      --opacity: 1;
-    }
-  }
-
-  @keyframes rotate {
-    to {
-      --angle: 360deg;
-    }
-  }
-
-  .rainbow {
-    animation: rotate 4s linear infinite, opacityChange 3s infinite alternate;
-  }
-
-  /* Hide the warning */
-  .warning {
-    display: none;
-  }
+.rainbow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: #222531;
+  border-radius: 5px;
 }
 
 .content {
@@ -93,68 +79,4 @@
   height: 100%;
   background-color: #19b2ff38;
   /* background-color: #000000cc; */
-}
-
-
-
-
-
-
-.hernu {
-  border-radius: 0.2px;
-  padding: 2rem;
-  margin: auto;
-  display: grid;
-  text-align: center;
-z-index: -1;
-  font-size: 0.5em;
-
-  --border-size: 0.05155rem;
-  border: var(--border-size) solid transparent;
-
-  /* Paint an image in the border */
-  border-image: conic-gradient(
-      from var(--angle),
-      #32fff9 0deg 90deg,
-      #102941 90deg 180deg,
-      #0867a4 180deg 270deg,
-      #05acff 270deg 360deg
-    )
-    1 stretch;
-}
-
-/* Animate when Houdini is available */
-@supports (background: paint(houdini)) {
-  @property --opacity {
-    syntax: "<number>";
-    initial-value: 0.5;
-    inherits: false;
-  }
-
-  @property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-
-  @keyframes opacityChange {
-    to {
-      --opacity: 0.3;
-    }
-  }
-
-  @keyframes rotate {
-    to {
-      --angle: 360deg;
-    }
-  }
-
-  .hernu {
-    animation: rotate 1s linear infinite, opacityChange 3s infinite alternate;
-  }
-
-  /* Hide the warning */
-  .warning {
-    display: none;
-  }
 }

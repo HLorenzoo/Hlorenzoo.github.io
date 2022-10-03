@@ -1,13 +1,14 @@
 import React from "react";
 
-import { Box } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 import DrawerSectionm from "./Drawer/Drawer";
+import Languages from "./Languages";
 const SideBar = () => {
   return (
-    <Box display={{ md: "none" }}>
+    <Flex flexDirection="column" display={{ lg: "none" }}>
       <DrawerSectionm />
-    </Box>
+    </Flex>
   );
 };
 
