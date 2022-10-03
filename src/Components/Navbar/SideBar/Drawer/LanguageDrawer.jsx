@@ -23,7 +23,11 @@ const LanguageDrawer = () => {
 
   return (
     <>
-      <Button onClick={onOpen} size="s" variant="ghost">
+      <Button 
+        onClick={onOpen}
+        variant="ghost"
+        display={{ base: "block", lg: "none" }}
+      >
         <Box mb="25px" ml="5px">
           <Languages />
         </Box>

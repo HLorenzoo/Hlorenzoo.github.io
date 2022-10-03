@@ -26,9 +26,6 @@ const animationKeyframes = keyframes`
     100%{transform: scale(0) rotate(0);}
   `;
 const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and non-Chakra props to be forwarded.
-   */
   shouldForwardProp: (prop) =>
     isValidMotionProp(prop) || shouldForwardProp(prop),
 });
@@ -39,10 +36,12 @@ const Loader = () => {
   return (
     <Flex
       h="100vh"
-      bg="rgba(34, 37, 49, 255)"
+      bg="#222531"
       justifyContent="center"
       alignItems="center"
       w="100%"
+      p={0}
+      m={0}
     >
       <Box
         as={motion.div}

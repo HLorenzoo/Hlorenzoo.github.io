@@ -23,7 +23,7 @@ const DrawerLanguages = () => {
 
   return (
     <Menu>
-      <MenuButton mb="36px">
+      <MenuButton pb="30px" h="100%">
         <Languages />
       </MenuButton>
       <MenuList ml={{ base: "200px", lg: "0" }} w="20%" bgColor="#222531">

@@ -11,7 +11,7 @@ const Header = ({ data }) => {
   const { language, setlanguage } = useAppContext();
 
   return (
-    <div style={{ width: "100%", height: "70%" }}>
+    <div style={{ width: "100%", height: "60%" }}>
       <motion.div
         style={{ width: "100%", height: "100%" }}
         initial={{ opacity: 0 }}
