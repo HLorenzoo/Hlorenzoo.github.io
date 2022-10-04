@@ -36,7 +36,7 @@
   top: -50%;
   width: 200%;
   height: 200%;
-  background-color: #399953;
+  background-color: #0e1015;
   background-repeat: no-repeat;
   background-size: 50% 50%, 50% 50%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
@@ -54,29 +54,18 @@
   top: 6px;
   width: calc(100% - 12px);
   height: calc(100% - 12px);
-  background: #222531;
+  background: #0e1015;
   border-radius: 5px;
 }
 
 .content {
   position: absolute;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 3px 0px,
-    rgba(255, 255, 255, 0.06) 0px 1px 2px 0px;
+ 
   width: 100%;
-  height: 48%;
-  top: 20%;
+
   display: flex;
   flex-direction: column;
-  color: #222531;
-  backdrop-filter: blur(10px);
+
+  backdrop-filter: blur(7px);
 }
 
-.overlay {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #19b2ff38;
-  /* background-color: #000000cc; */
-}

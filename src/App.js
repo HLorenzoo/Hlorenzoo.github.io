@@ -34,19 +34,19 @@ function App() {
   return (
     <>
       {show ? (
-        <Flex flexDirection="column" bgColor="#171923" h="100vh" p={0} m={0}>
+        <Flex flexDirection="column" bgColor="#0e1015" h="100vh" p={0} m={0}>
           <Loader />
         </Flex>
       ) : (
         <ChakraProvider theme={theme}>
-          <Flex flexDirection="column" bgColor="#171923" h="100vh" p={0} m={0}>
+          <Flex flexDirection="column" bgColor="#0e1015" h="100vh" p={0} m={0}>
             <Navbar />
-            <Box bgColor="#171923" mt="100px">
+            <Box bgColor="#0e1015" mt="100px">
               <Header data={data} />
             </Box>
             <Flex
               h="100%"
-              bgColor="#171923"
+              bgColor="#0e1015"
               flexDirection="column"
               alignItems="center"
               justifyContent="center"

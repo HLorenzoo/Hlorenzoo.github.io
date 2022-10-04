@@ -36,7 +36,7 @@ const Loader = () => {
   return (
     <Flex
       h="100vh"
-      bg="#222531"
+      bg="#0e1015"
       justifyContent="center"
       alignItems="center"
       w="100%"

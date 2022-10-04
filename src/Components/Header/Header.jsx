@@ -18,13 +18,13 @@ const Header = ({ data }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <Box h={{ base: "590px", md: "650px" }}>
+        <Box h={{ base: "500px", md: "650px" }}>
           <video
             style={{
               width: "100%",
               height: "100%",
               objectFit: "fill",
-              opacity: 0.5,
+              opacity: 0.8,
             }}
             src={video}
             autoPlay
@@ -34,7 +34,12 @@ const Header = ({ data }) => {
         </Box>
       </motion.div>
 
-      <Flex className="content" pt={{ base: "70px", md: "70px" }}>
+      <Flex
+        className="content"
+        top={{ base: "15%" }}
+        h={{ base: "60%", md: "45%" }}
+        pt={{ base: "70px", md: "70px" }}
+      >
         <Flex
           flexDirection="column"
           justifyContent="center"
@@ -70,7 +75,7 @@ const Header = ({ data }) => {
               animate={{ opacity: 1 }}
               transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 2.2s"
               color="white"
-              fontSize="2.5rem"
+              fontSize="2rem"
               className="calibre"
             >
               <small style={{ color: "#19b1ff" }}>
@@ -106,9 +111,6 @@ const Header = ({ data }) => {
             {data[language].init[3]}
           </Text>
         </Flex>
-        <span class="cloud">
-          <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
-        </span>
       </Flex>
     </div>
   );

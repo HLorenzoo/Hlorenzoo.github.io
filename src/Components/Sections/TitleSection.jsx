@@ -1,4 +1,4 @@
-import { Divider, Flex, Text } from "@chakra-ui/react";
+import { Divider, Flex, Text, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 import useAppContext from "../../context/context";
@@ -6,7 +6,12 @@ import useAppContext from "../../context/context";
 const TitleSection = ({ data, sectionPage }) => {
   const { language, setlanguage } = useAppContext();
   return (
-    <>
+    <Flex
+      flexDirection="column"
+      
+      alignItems="center"
+      justifyContent="center"
+    >
       <Flex
         w="50%"
         as={motion.div}
@@ -49,7 +54,7 @@ const TitleSection = ({ data, sectionPage }) => {
         display={{ lg: "none" }}
       />
       {sectionPage}
-    </>
+    </Flex>
   );
 };
 

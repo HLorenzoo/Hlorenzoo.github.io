@@ -2,14 +2,14 @@
   /* In commentaries are the way to make it slide from left to right */
   position: absolute;
   height: 100vh;
-  background: #222531;
+  background: #222531ec;
   top: 96px;
   right: 0;
   /* right: 100%; */
   width: 55%;
   z-index: 200;
   /* box-shadow: rgba(0, 0, 0, 0.15) -1.95px -1.95px -2.6px; */
-  box-shadow: -1.95px 1.95px 2.6px 0px rgba(255, 255, 255, 0.15);
+  box-shadow: -1.95px 1.95px 2.6px 0px rgba(255, 255, 255, 0.226);
   transform: translateX(0);
   transition: transform 1s ease-out;
 }
