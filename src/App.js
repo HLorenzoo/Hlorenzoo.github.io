@@ -41,15 +41,15 @@ function App() {
             <Navbar />
             <Box bgColor="#171923">
               <Header data={data} />
-              <Flex
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="center"
-                mt="25px"
-              >
-                <AboutMe data={data} />
-              </Flex>
             </Box>
+            <Flex
+              flexDirection="column"
+              alignItems="center"
+              justifyContent="center"
+              mt="25px"
+            >
+              <AboutMe data={data} />
+            </Flex>
           </Flex>
         </ChakraProvider>
       )}

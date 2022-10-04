@@ -21,7 +21,7 @@ const Header = ({ data }) => {
         <video
           style={{
             width: "100%",
-            height: "100%",
+            height: "60vh",
             objectFit: "fill",
             opacity: 0.5,
           }}
@@ -32,8 +32,12 @@ const Header = ({ data }) => {
         />
       </motion.div>
 
-      <Flex className="content" pt={{ base: "30px", md: "100px" }}>
-        <Flex flexDirection="column" pl={{ base: "25px", md: "250px" }}>
+      <Flex className="content" pt={{ base: "70px", md: "0px" }}>
+        <Flex
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
           <Text
             as={motion.p}
             initial={{ opacity: 0 }}
@@ -42,7 +46,7 @@ const Header = ({ data }) => {
             color="#19b1ff"
             transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 1.3s"
             fontWeight="bold"
-            fontSize={{ base: "15px", md: "1.5rem" }}
+            fontSize={{ base: "15px", lg: "1.5rem" }}
           >
             {data[language].init[0]}
           </Text>
@@ -52,7 +56,7 @@ const Header = ({ data }) => {
             animate={{ opacity: 1 }}
             transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 1.8s"
             color="white"
-            fontSize={{ base: "40px", md: "5rem" }}
+            fontSize={{ base: "40px", lg: "5rem" }}
             className="calibre"
           >
             Hernan Lorenzo.
@@ -87,15 +91,15 @@ const Header = ({ data }) => {
             </Text>
           </Flex>
           <Text
-            pt={{ md: "15px" }}
+            pt={{ lg: "15px" }}
             as={motion.p}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 2.5s"
             color="white"
-            w={{ base: "100%", md: "50%" }}
+            w={{ base: "50%", lg: "50%" }}
             className="sf"
-            fontSize={{ base: "15px", md: "1.5rem" }}
+            fontSize={{ base: "1rem", lg: "1.5rem" }}
           >
             {data[language].init[3]}
           </Text>
