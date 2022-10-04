@@ -18,21 +18,23 @@ const Header = ({ data }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <video
-          style={{
-            width: "100%",
-            height: "60vh",
-            objectFit: "fill",
-            opacity: 0.5,
-          }}
-          src={video}
-          autoPlay
-          loop
-          muted
-        />
+        <Box h={{ base: "590px", md: "650px" }}>
+          <video
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "fill",
+              opacity: 0.5,
+            }}
+            src={video}
+            autoPlay
+            loop
+            muted
+          />
+        </Box>
       </motion.div>
 
-      <Flex className="content" pt={{ base: "70px", md: "0px" }}>
+      <Flex className="content" pt={{ base: "70px", md: "70px" }}>
         <Flex
           flexDirection="column"
           justifyContent="center"

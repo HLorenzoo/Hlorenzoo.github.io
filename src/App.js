@@ -18,8 +18,10 @@ import { MotionConfig } from "framer-motion";
 import Loader from "./Components/Loader/Loader";
 import Header from "./Components/Header/Header";
 import theme from "./theme";
-import AboutMe from "./Components/AboutMe/AboutMe";
+
 import data from "./data";
+import TitleSection from "./Components/Sections/TitleSection";
+import AboutMe from "./Components/Sections/AboutMe";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -39,16 +41,18 @@ function App() {
         <ChakraProvider theme={theme}>
           <Flex flexDirection="column" bgColor="#171923" h="100vh" p={0} m={0}>
             <Navbar />
-            <Box bgColor="#171923">
+            <Box bgColor="#171923" mt="100px">
               <Header data={data} />
             </Box>
             <Flex
+              h="100%"
+              bgColor="#171923"
               flexDirection="column"
               alignItems="center"
               justifyContent="center"
               mt="25px"
             >
-              <AboutMe data={data} />
+              <TitleSection data={data} sectionPage={<AboutMe />} />
             </Flex>
           </Flex>
         </ChakraProvider>

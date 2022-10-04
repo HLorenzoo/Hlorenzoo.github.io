@@ -32,7 +32,8 @@ const Navbar = () => {
         transition="1.5s"
         p={4}
         className="navbar"
-        position="sticky"
+        position="fixed"
+        w="100%"
       >
         <Flex h={16} alignItems={"center"} justifyContent="space-between">
           <Box className="loader" pl="20px">
