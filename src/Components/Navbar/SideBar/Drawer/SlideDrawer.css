@@ -1,8 +1,8 @@
 .side-drawer {
   /* In commentaries are the way to make it slide from left to right */
-  position: absolute;
+  position: fixed;
   height: 100vh;
-  background: #222531ec;
+  background-color: #0e1015f1;
   top: 96px;
   right: 0;
   /* right: 100%; */

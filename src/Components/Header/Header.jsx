@@ -11,20 +11,23 @@ const Header = ({ data }) => {
   const { language, setlanguage } = useAppContext();
 
   return (
-    <div style={{ width: "100%", height: "60%" }}>
+    <div style={{ width: "100%", height: "100%", paddingBottom: "50px" }}>
       <motion.div
         style={{ width: "100%", height: "100%" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <Box h={{ base: "500px", md: "650px" }}>
+        <Box
+          h={{ base: "500px", md: "750px" }}
+          boxShadow="rgba(10, 70, 110, 0.4) 0px 5px, rgba(10, 70, 110, 0.3) 0px 10px, rgba(10, 70, 110, 0.2) 0px 15px, rgba(10, 70, 110, 0.1) 0px 20px, rgba(10, 70, 110, 0.05) 0px 25px"
+        >
           <video
             style={{
               width: "100%",
               height: "100%",
               objectFit: "fill",
-              opacity: 0.8,
+              opacity: 0.2,
             }}
             src={video}
             autoPlay
@@ -36,8 +39,8 @@ const Header = ({ data }) => {
 
       <Flex
         className="content"
-        top={{ base: "15%" }}
-        h={{ base: "60%", md: "45%" }}
+        top={{ base: "10%", md: "20%" }}
+        // h={{ base: "410px", md: "450px" }}
         pt={{ base: "70px", md: "70px" }}
       >
         <Flex

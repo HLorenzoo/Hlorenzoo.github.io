@@ -22,6 +22,7 @@ import theme from "./theme";
 import data from "./data";
 import TitleSection from "./Components/Sections/TitleSection";
 import AboutMe from "./Components/Sections/AboutMe";
+import Section from "./Components/Sections/Section";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -39,20 +40,19 @@ function App() {
         </Flex>
       ) : (
         <ChakraProvider theme={theme}>
-          <Flex flexDirection="column" bgColor="#0e1015" h="100vh" p={0} m={0}>
+          <Flex flexDirection="column" bgColor="#0e1015" p={0} m={0}>
             <Navbar />
-            <Box bgColor="#0e1015" mt="100px">
+            <Box bgColor="#0e1015" mt="100px" h="100%">
               <Header data={data} />
             </Box>
             <Flex
               h="100%"
               bgColor="#0e1015"
-              flexDirection="column"
-              alignItems="center"
               justifyContent="center"
-              mt="25px"
+              flexDirection="column"
             >
-              <TitleSection data={data} sectionPage={<AboutMe />} />
+              <Section data={data} />
+              {/* <TitleSection data={data} sectionPage={<AboutMe />} /> */}
             </Flex>
           </Flex>
         </ChakraProvider>

@@ -2,18 +2,14 @@ import { Divider, Flex, Text, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 import useAppContext from "../../context/context";
+import AboutMe from "./AboutMe";
 
 const TitleSection = ({ data, sectionPage }) => {
   const { language, setlanguage } = useAppContext();
   return (
-    <Flex
-      flexDirection="column"
-      
-      alignItems="center"
-      justifyContent="center"
-    >
+    <Flex flexDirection="column"  bgColor="#0e1015">
       <Flex
-        w="50%"
+        w="100%"
         as={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -23,7 +19,7 @@ const TitleSection = ({ data, sectionPage }) => {
         fontWeight="bold"
         fontSize={{ base: "15px", md: "1.1rem" }}
         pl={{ base: "0px", md: "50px" }}
-        pt={{ base: "50px", md: "0px" }}
+        pt={{ base: "0px", md: "10px" }}
       >
         <Flex alignItems="center" justifyContent="center">
           <Text fontSize={{ base: "0.9rem", md: "1.1rem" }}>0.1</Text>
@@ -37,15 +33,13 @@ const TitleSection = ({ data, sectionPage }) => {
             {`${data[language].navbar[1]}`}
           </Text>
         </Flex>
-        <Divider
-          borderColor="#19b1ff"
-          mt="15px"
-          ml="20px"
-          w={{ md: "30%", lg: "60%" }}
-          display={{ base: "none", lg: "block" }}
-        />
       </Flex>
+
       <Divider
+        as={motion.hr}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition="opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.20s"
         borderColor="#19b1ff"
         mt="10px"
         mb="10px"
@@ -53,6 +47,7 @@ const TitleSection = ({ data, sectionPage }) => {
         w="75%"
         display={{ lg: "none" }}
       />
+
       {sectionPage}
     </Flex>
   );
