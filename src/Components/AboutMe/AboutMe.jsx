@@ -24,7 +24,7 @@ const AboutMe = ({ data }) => {
         w={{ base: "70%", lg: "85%", xl: "60%" }}
         flexDirection={{ base: "column", lg: "row" }}
       >
-        <Flex flexDirection="column" color="white">
+        <Flex flexDirection="column" color="white" mt="25px">
           <Text
             className="calibre"
             fontSize="20px"
@@ -59,7 +59,7 @@ const AboutMe = ({ data }) => {
         <Flex
           flexDirection="column"
           w="100%"
-          h="350px"
+          h="100%"
           gap={6}
           justifyContent="center"
           alignItems="center"
@@ -82,7 +82,8 @@ const AboutMe = ({ data }) => {
             _hover={{ filter: "grayscale(15%)" }}
           />
           <Button
-            w={{ base: "100", lg: "80%" }}
+            w={{ base: "100", lg: "80%", xl: "70%" }}
+            h="50px"
             as={motion.button}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
