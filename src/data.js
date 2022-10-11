@@ -1,6 +1,6 @@
 const data = {
   en: {
-    navbar: ["Home", "About me", "Skills", "Projects", "Contact"],
+    navbar: ["Home", "About me", "Projects", "Skills", "Contact"],
     init: [
       "Hello World! My name is",
       "Hernan Lorenzo.",
@@ -25,7 +25,7 @@ const data = {
     projects: ["Projects"],
   },
   es: {
-    navbar: ["Inicio", "Sobre mí", "Tecnologías", "Proyectos", "Contacto"],
+    navbar: ["Inicio", "Sobre mí", "Proyectos", "Tecnologías", "Contacto"],
     init: [
       "Hola, mi nombre es",
       "Hernan Lorenzo.",

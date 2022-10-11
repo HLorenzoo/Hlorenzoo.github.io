@@ -20,9 +20,9 @@ import Header from "./Components/Header/Header";
 import theme from "./theme";
 
 import data from "./data";
-import TitleSection from "./Components/Sections/TitleSection";
-import AboutMe from "./Components/Sections/AboutMe";
-import Section from "./Components/Sections/Section";
+import TitleSection from "./Components/AboutMe/TitleSection";
+import AboutMe from "./Components/AboutMe/AboutMe";
+import Projects from "./Components/Projects/Projects";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -51,8 +51,8 @@ function App() {
               justifyContent="center"
               flexDirection="column"
             >
-              <Section data={data} />
-              {/* <TitleSection data={data} sectionPage={<AboutMe />} /> */}
+              <AboutMe data={data} />
+              <Projects data={data} />
             </Flex>
           </Flex>
         </ChakraProvider>

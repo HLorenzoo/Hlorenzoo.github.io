@@ -13,7 +13,10 @@ const Header = ({ data }) => {
   return (
     <div style={{ width: "100%", height: "100%", paddingBottom: "50px" }}>
       <motion.div
-        style={{ width: "100%", height: "100%" }}
+        style={{
+          width: "100%",
+          height: "100%",
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
@@ -27,7 +30,9 @@ const Header = ({ data }) => {
               width: "100%",
               height: "100%",
               objectFit: "fill",
-              opacity: 0.2,
+              opacity: 0.5,
+              clipPath:
+                " polygon(14.3% 0.8%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)",
             }}
             src={video}
             autoPlay
