@@ -30,6 +30,7 @@ import Contact from "./Components/Contact/Contact";
 import Github from "./assets/icons/github.png";
 import wp from "./assets/icons/wp.png";
 import Linkedin from "./assets/icons/linkedin.png";
+import msn from "./assets/icons/msn.png";
 function App() {
   const [show, setShow] = useState(false);
   useEffect(() => {
@@ -49,7 +50,7 @@ function App() {
         <Flex flexDirection="column" bgColor="#0e1015" p={0} m={0}>
           <Navbar />
           <Flex
-            display={{ base: "none", md: 'flex' }}
+            display={{ base: "none", md: "flex" }}
             position="fixed"
             zIndex={999}
             h="100vh"
@@ -74,7 +75,9 @@ function App() {
                   transform: { base: "scale(1.25)", lg: "scale(1.10)" },
                 }}
               >
-                <Image src={Github} w="33px" h="33px" />
+                <Link href="https://github.com/HLorenzoo/" isExternal>
+                  <Image src={Github} w="33px" h="33px" />
+                </Link>
               </Box>
               <Box
                 filter="grayscale(0)"
@@ -85,7 +88,12 @@ function App() {
                   transform: { base: "scale(1.25)", lg: "scale(1.10)" },
                 }}
               >
-                <Image src={Linkedin} w="33px" h="33px" />
+                <Link
+                  href="https://www.linkedin.com/in/hernan-lorenzo-044b02240/"
+                  isExternal
+                >
+                  <Image src={Linkedin} w="33px" h="33px" />
+                </Link>
               </Box>
               <Box
                 filter="grayscale(0.2)"
@@ -96,7 +104,9 @@ function App() {
                   transform: { base: "scale(1.25)", lg: "scale(1.10)" },
                 }}
               >
-                <Image src={wp} w="33px" h="33px" />
+                <Link href=" https://wa.me/+543816977428" isExternal>
+                  <Image src={wp} w="33px" h="33px" />
+                </Link>
               </Box>
               <Box
                 filter="grayscale(0.2)"
@@ -107,7 +117,9 @@ function App() {
                   transform: { base: "scale(1.25)", lg: "scale(1.10)" },
                 }}
               >
-                <Image src={Github} w="33px" h="33px" />
+                <Link href="mailto:lorenzoestebanhernan@gmail.com" isExternal>
+                  <Image src={msn} w="33px" h="33px" />
+                </Link>
               </Box>
             </Flex>
 
