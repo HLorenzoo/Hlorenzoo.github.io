@@ -80,7 +80,7 @@ function App() {
                 </Link>
               </Box>
               <Box
-                filter="grayscale(0)"
+                filter="grayscale(0.3)"
                 cursor="pointer"
                 transition="all .5s ease-out"
                 _hover={{
@@ -96,7 +96,7 @@ function App() {
                 </Link>
               </Box>
               <Box
-                filter="grayscale(0.2)"
+                filter="grayscale(0.6)"
                 cursor="pointer"
                 transition="all .5s ease-out"
                 _hover={{
@@ -109,7 +109,7 @@ function App() {
                 </Link>
               </Box>
               <Box
-                filter="grayscale(0.2)"
+                filter="grayscale(0.5)"
                 cursor="pointer"
                 transition="all .5s ease-out"
                 _hover={{
