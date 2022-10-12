@@ -49,7 +49,7 @@ const Skills = ({ data }) => {
       h={{ base: "100%", md: "100%" }}
       bgColor="#0e1015"
       mt="45px"
-      mb="45px"
+      mb={{ md: "45px" }}
     >
       <TitleSection data={data} n={3} />
       <Flex
@@ -70,7 +70,7 @@ const Skills = ({ data }) => {
           mr={{ base: "2rem", md: "6rem", lg: "6rem" }}
           pl={{ base: "1.2rem" }}
           pr={{ base: ".5rem" }}
-          mb={{ base: "2rem", md: "2.7rem",lg:'4rem' }}
+          mb={{ base: "2rem", md: "2.7rem", lg: "4rem" }}
         >
           {arr.map((skill, i) => {
             return (
