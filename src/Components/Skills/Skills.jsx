@@ -20,6 +20,7 @@ import sass from "../../assets/skills/sass.png";
 import git from "../../assets/skills/git.png";
 import chakra from "../../assets/skills/chakra.png";
 import fondo from "../../assets/skills/fondo.png";
+import mui from "../../assets/skills/mui.png";
 const arr = [
   node,
   express,
@@ -51,10 +52,17 @@ const Skills = ({ data }) => {
       mb="45px"
     >
       <TitleSection data={data} n={3} />
-      <Flex w="100%" alignItems="center" justifyContent="center">
+      <Flex
+        w="100%"
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column"
+      >
         <Grid
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           w={{ base: "90%", md: "75%" }}
-          className="skills"
           templateColumns={{ base: "repeat(2, 1fr)", xl: "repeat(4, 1fr)" }}
           gap={{ base: "8", md: "12", lg: "20" }}
           mt="3rem"
@@ -62,32 +70,44 @@ const Skills = ({ data }) => {
           mr={{ base: "2rem", md: "6rem", lg: "6rem" }}
           pl={{ base: "1.2rem" }}
           pr={{ base: ".5rem" }}
-          mb={{ base: "6rem", md: "8rem" }}
+          mb={{ base: "2rem", md: "4rem" }}
         >
           {arr.map((skill, i) => {
             return (
               <Box
                 as={motion.div}
+                className="skills"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 key={i}
                 filter="grayscale(0.9)"
                 transition="all .8s ease-in-out"
+                w={{ sm: "152px", m: "190px", md: "235px" }}
+                h={{ sm: "65px", m: "81px", md: "101px" }}
                 _hover={{
                   filter: "grayscale(0)",
                   transform: { base: "scale(1.25)", lg: "scale(1.10)" },
                 }}
               >
-                <Image
-                  src={skill}
-                  alt="skill"
-                  w={{ sm: "152px", m: "190px", md: "235px" }}
-                  h={{ sm: "65px", m: "81px", md: "101px" }}
-                />
+                <Image src={skill} alt="skill" p={1} />
               </Box>
             );
           })}
         </Grid>
+        <Box
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          filter="grayscale(0.9)"
+          transition="all .8s ease-in-out"
+          _hover={{
+            filter: "grayscale(0)",
+            transform: { base: "scale(1.25)", lg: "scale(1.10)" },
+          }}
+          className="skills"
+        >
+          <Image src={mui} h={{ base: "70px", md: "150px" }} />
+        </Box>
       </Flex>
     </Flex>
   );
