@@ -70,7 +70,7 @@ const Skills = ({ data }) => {
           mr={{ base: "2rem", md: "6rem", lg: "6rem" }}
           pl={{ base: "1.2rem" }}
           pr={{ base: ".5rem" }}
-          mb={{ base: "2rem", md: "4rem" }}
+          mb={{ base: "2rem", md: "2.7rem",lg:'4rem' }}
         >
           {arr.map((skill, i) => {
             return (
@@ -106,7 +106,7 @@ const Skills = ({ data }) => {
           }}
           className="skills"
         >
-          <Image src={mui} h={{ base: "70px", md: "150px" }} />
+          <Image src={mui} h={{ base: "70px", md: "118px", lg: "150px" }} />
         </Box>
       </Flex>
     </Flex>

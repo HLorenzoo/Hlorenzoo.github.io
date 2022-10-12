@@ -44,9 +44,10 @@ const Header = ({ data }) => {
 
       <Flex
         className="content"
-        top={{ base: "10%", md: "20%" }}
+        // top={{ base: "10%", md: "20%" }}
         // h={{ base: "410px", md: "450px" }}
-        pt={{ base: "70px", md: "70px" }}
+        // pt={{ base: "70px", md: "70px" }}
+        top={{base:40,md:80}}
       >
         <Flex
           flexDirection="column"
