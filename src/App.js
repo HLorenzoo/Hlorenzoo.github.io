@@ -23,6 +23,7 @@ import data from "./data";
 import TitleSection from "./Components/AboutMe/TitleSection";
 import AboutMe from "./Components/AboutMe/AboutMe";
 import Projects from "./Components/Projects/Projects";
+import Skills from "./Components/Skills/Skills";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -53,6 +54,7 @@ function App() {
             >
               <AboutMe data={data} />
               <Projects data={data} />
+              <Skills data={data} />
             </Flex>
           </Flex>
         </ChakraProvider>

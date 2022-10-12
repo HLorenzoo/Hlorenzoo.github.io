@@ -22,7 +22,45 @@ const data = {
       "I am a proactive, dedicated and responsible person. In my work experiences, teamwork was always important and each one of them helped me to grow.",
       "Download Resume",
     ],
-    projects: ["Projects"],
+    projects: {
+      title: "Projects",
+      projects: [
+        {
+          name: "Portfolio",
+          path: "/assets/images/portfolio.png",
+          linkGit: "https://github.com/aledamen/portfolio",
+          linkWeb: "#home",
+          description: "My first personal portfolio.",
+          skills: ["Next.js", "ChakraUI"],
+        },
+        {
+          name: "WOW Magazine",
+          path: "/assets/images/revistaWOW.png",
+          linkGit: "#home",
+          linkWeb: "https://p5-wow-git-develop-joaquinreiners.vercel.app/",
+          description:
+            "Group project developing a web page for a female oriented magazine. The site has completly dynamic desing and allsections can be laid ouy according to editorial needs.Development and Ux/UI design of an interactive widget,connecting the user's chosen emotion with recommended articles to increse site traffic",
+          skills: ["Strapi", "MongoDB", "Next.js", "ChakraUI"],
+        },
+
+        {
+          name: "Pasion Argenta",
+          path: "/assets/images/e-commerce.png",
+          linkGit: "https://github.com/aledamen/E-Commerce-Pasion-Argenta",
+          linkWeb: "#home",
+          description: "Project in a SCRUM team of five members.",
+          skills: ["Node.js", "MongoDB", "React.js", "MUI"],
+        },
+        {
+          name: "TMDB",
+          path: "/assets/images/TMDB.png",
+          linkGit: "https://github.com/aledamen/TMDB.",
+          linkWeb: "https://alejandrodamen-tmdb.vercel.app/",
+          description: "Individual project for one week.",
+          skills: ["Node.js", "MongoDB", "React.js", "SASS"],
+        },
+      ],
+    },
   },
   es: {
     navbar: ["Inicio", "Sobre mí", "Proyectos", "Tecnologías", "Contacto"],
@@ -47,7 +85,44 @@ const data = {
       "Soy una persona pro activa, dedicada y responsable. En mis experiencias laborales siempre fue importante tanto el trabajo en equipo como la comunicación y cada una de ellas me ayudaron a crecer personalmente.",
       "Descargar CV",
     ],
-    projects: ["Proyectos"],
+    projects: {
+      title: "Proyectos",
+      projects: [
+        {
+          name: "Portfolio",
+          path: "/assets/images/portfolio.png",
+          linkGit: "https://github.com/aledamen/portfolio",
+          linkWeb: "#home",
+          description:
+            "Mi Primer portfolio personal, creado con React utilizando un frameworks como ChakraUI y FramerMotion.",
+          skills: ["Next.js", "ChakraUI"],
+        },
+        {
+          name: "Revista WOW",
+          path: "/assets/images/revistaWOW.png",
+          linkGit: "#home",
+          linkWeb: "https://p5-wow-git-develop-joaquinreiners.vercel.app/",
+          description: "Proyecto profesional para Hogarth WorldWide.",
+          skills: ["Strapi", "MongoDB", "Next.js", "ChakraUI"],
+        },
+        {
+          name: "Pasion Argenta",
+          path: "/assets/images/e-commerce.png",
+          linkGit: "https://github.com/aledamen/E-Commerce-Pasion-Argenta",
+          linkWeb: "#home",
+          description: "Proyecto en un equipo SCRUM de cinco integrantes.",
+          skills: ["Node.js", "MongoDB", "React.js", "MUI"],
+        },
+        {
+          name: "TMDB",
+          path: "/assets/images/TMDB.png",
+          linkGit: "https://github.com/aledamen/TMDB.",
+          linkWeb: "https://alejandrodamen-tmdb.vercel.app/",
+          description: "Proyecto individual durante una semana.",
+          skills: ["Node.js", "MongoDB", "React.js", "SASS"],
+        },
+      ],
+    },
   },
 };
 

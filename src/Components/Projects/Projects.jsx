@@ -10,6 +10,7 @@ import Logo from "../Logo/Logo";
 import Card from "./Card";
 const Projects = ({ data }) => {
   const { language, setlanguage } = useAppContext();
+
   return (
     <Flex
       alignItems="center"
@@ -30,9 +31,32 @@ const Projects = ({ data }) => {
         pl={{ base: ".2rem", sm: ".5rem" }}
         pr={{ base: ".2rem", sm: ".5rem" }}
         mb={{ base: "6rem", md: "8rem" }}
+        width={{base:"85vw",md:'70vw'}}
       >
-        <Card image={portfolio} proyecto='Portfolio' tecnologias='ChakraUI - ReactJS - FramerMotion' description='Portafolio creado con react, utilizando un frameworks como ChakraUI y FramerMotion'/>
-        <Card image={wow} proyecto='Revista WOW' tecnologias='ChakraUI - ReactJS - FramerMotion' description='Portafolio creado con react, utilizando un frameworks como ChakraUI y FramerMotion'/>
+        <Card
+          image={portfolio}
+          proyecto="Portfolio"
+          tecnologias="ChakraUI - ReactJS - FramerMotion"
+          description={data[language].projects.projects[0].description}
+        />
+        <Card
+          image={wow}
+          proyecto={data[language].projects.projects[1].name}
+          tecnologias="ChakraUI - ReactJS - FramerMotion"
+          description={data[language].projects.projects[1].description}
+        />
+        <Card
+          image={wow}
+          proyecto="Revista WOW"
+          tecnologias="ChakraUI - ReactJS - FramerMotion"
+          description="Portafolio creado con react, utilizando un frameworks como ChakraUI y FramerMotion"
+        />
+        <Card
+          image={wow}
+          proyecto="Revista WOW"
+          tecnologias="ChakraUI - ReactJS - FramerMotion"
+          description="Portafolio creado con react, utilizando un frameworks como ChakraUI y FramerMotion"
+        />
       </Grid>
     </Flex>
   );
