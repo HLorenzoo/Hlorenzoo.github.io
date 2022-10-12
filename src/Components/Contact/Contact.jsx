@@ -34,7 +34,7 @@ const Contact = ({ data }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="calibre"
-          fontSize={{base:'2.8rem',md:"1.5rem"}}
+          fontSize={{ base: "2.8rem", md: "1.5rem" }}
           color="#19b1ff"
           fontWeight="extrabold"
         >
@@ -47,7 +47,7 @@ const Contact = ({ data }) => {
           whileInView={{ opacity: 1 }}
           color="white"
           className="calibre"
-          fontSize={{base:'1.1rem',md:"1.5rem"}}
+          fontSize={{ base: "1.1rem", md: "1.5rem" }}
           w="50%"
           textAlign="center"
         >
@@ -74,7 +74,7 @@ const Contact = ({ data }) => {
         >
           {language === "es" ? "Saludame" : "Say Hello"}
         </Button>
-        <Flex gap={4} p={3}>
+        <Flex gap={4} p={3} display={{ base: "flex", md: "none" }}>
           <Box
             filter="grayscale(0.2)"
             cursor="pointer"
