@@ -21,7 +21,7 @@ const AboutMe = ({ data }) => {
       <Flex
         alignItems="center"
         justifyContent="center"
-        w={{ base: "70%", lg: "85%", xl: "60%" }}
+        w={{ base: "70%", lg: "85%", xl: "70%" }}
         flexDirection={{ base: "column", lg: "row" }}
       >
         <Flex flexDirection="column" color="white" mt="25px">

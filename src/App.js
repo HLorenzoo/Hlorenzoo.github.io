@@ -53,10 +53,10 @@ function App() {
               display={{ base: "none", md: "flex" }}
               position="fixed"
               zIndex={999}
-              h="100vh"
+              h="100%"
+              bottom={-200}
               left="4rem"
               flexDirection="column"
-              mt="400px"
               justifyContent="center"
               alignContent="center"
               alignItems="center"

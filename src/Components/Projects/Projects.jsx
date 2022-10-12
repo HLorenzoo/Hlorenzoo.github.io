@@ -31,7 +31,7 @@ const Projects = ({ data }) => {
         pl={{ base: ".2rem", sm: ".5rem" }}
         pr={{ base: ".2rem", sm: ".5rem" }}
         mb={{ base: "6rem", md: "8rem" }}
-        width={{base:"85vw",md:'70vw'}}
+        width={{base:"85vw",md:'80vw'}}
       >
         <Card
           image={portfolio}
