@@ -4,15 +4,21 @@ import useAppContext from "../../context/context";
 import TitleSection from "../AboutMe/TitleSection";
 import portfolio from "../../assets/images/portfolio.png";
 import wow from "../../assets/images/wow.png";
+import tmdb from "../../assets/images/tmdb.png";
+import ecom from "../../assets/images/ecom.png";
 import "./project.css";
 import Loader from "../Loader/Loader";
 import Logo from "../Logo/Logo";
 import Card from "./Card";
+import github from "../../assets/icons/github.png";
+import click from "../../assets/icons/click.png";
+
 const Projects = ({ data }) => {
   const { language, setlanguage } = useAppContext();
 
   return (
     <Flex
+      id="proyectos"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
@@ -31,31 +37,35 @@ const Projects = ({ data }) => {
         pl={{ base: ".2rem", sm: ".5rem" }}
         pr={{ base: ".2rem", sm: ".5rem" }}
         mb={{ base: "6rem", md: "8rem" }}
-        width={{base:"85vw",md:'80vw'}}
+        width={{ base: "85vw", md: "80vw" }}
       >
-        <Card
+        <Card img={github}
           image={portfolio}
           proyecto="Portfolio"
           tecnologias="ChakraUI - ReactJS - FramerMotion"
           description={data[language].projects.projects[0].description}
+          link={data[language].projects.projects[0].linkGit}
         />
-        <Card
+        <Card img={click}
+          link={data[language].projects.projects[1].linkWeb}
           image={wow}
           proyecto={data[language].projects.projects[1].name}
-          tecnologias="ChakraUI - ReactJS - FramerMotion"
+          tecnologias="ChakraUI - ReactJS - NextJS - Strapi"
           description={data[language].projects.projects[1].description}
         />
-        <Card
-          image={wow}
-          proyecto="Revista WOW"
-          tecnologias="ChakraUI - ReactJS - FramerMotion"
-          description="Portafolio creado con react, utilizando un frameworks como ChakraUI y FramerMotion"
+        <Card img={github}
+          link={data[language].projects.projects[2].linkGit}
+          image={ecom}
+          proyecto={data[language].projects.projects[2].name}
+          tecnologias="MongoDB - Express - NodeJS - ReactJS - Redux - MUI - JWT"
+          description={data[language].projects.projects[2].description}
         />
-        <Card
-          image={wow}
-          proyecto="Revista WOW"
-          tecnologias="ChakraUI - ReactJS - FramerMotion"
-          description="Portafolio creado con react, utilizando un frameworks como ChakraUI y FramerMotion"
+        <Card img={github}
+          link={data[language].projects.projects[3].linkGit}
+          image={tmdb}
+          proyecto={data[language].projects.projects[3].name}
+          tecnologias="MongoDB - Express - NodeJS - ReactJS - Redux - MUI - JWT"
+          description={data[language].projects.projects[3].description}
         />
       </Grid>
     </Flex>

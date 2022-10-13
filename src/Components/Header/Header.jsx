@@ -11,7 +11,10 @@ const Header = ({ data }) => {
   const { language, setlanguage } = useAppContext();
 
   return (
-    <div style={{ width: "100%", height: "100%", paddingBottom: "50px" }}>
+    <div
+      id="inicio"
+      style={{ width: "100%", height: "100%", paddingBottom: "50px" }}
+    >
       <motion.div
         style={{
           width: "100%",
@@ -47,7 +50,7 @@ const Header = ({ data }) => {
         // top={{ base: "10%", md: "20%" }}
         // h={{ base: "410px", md: "450px" }}
         // pt={{ base: "70px", md: "70px" }}
-        top={{base:40,md:80}}
+        top={{ base: 40, md: 80 }}
       >
         <Flex
           flexDirection="column"
@@ -107,6 +110,7 @@ const Header = ({ data }) => {
             </Text>
           </Flex>
           <Text
+            textAlign={{ md: "center" }}
             pt={{ lg: "15px" }}
             as={motion.p}
             initial={{ opacity: 0 }}

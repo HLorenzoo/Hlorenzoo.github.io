@@ -9,13 +9,14 @@ const AboutMe = ({ data }) => {
   const { language, setlanguage } = useAppContext();
   return (
     <Flex
+      id="aboutme"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
       h={{ base: "980px", md: "100%" }}
       bgColor="#0e1015"
-      mt="45px"
-      mb="45px"
+      mt="65px"
+      mb="65px"
     >
       <TitleSection data={data} n={1} />
       <Flex
@@ -65,7 +66,7 @@ const AboutMe = ({ data }) => {
           alignItems="center"
         >
           <Image
-            width={{ base: "230px", lg: "300px" }}
+            width={{ base: "250px", lg: "300px" }}
             height={{ base: "240px", lg: "270px" }}
             pl="10px"
             mt={{ base: "20px" }}
@@ -76,25 +77,31 @@ const AboutMe = ({ data }) => {
             transition="opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.20s,all ease-in-out .5s"
             src={hernan}
             alt="Hernan Lorenzo"
-            borderRadius="15px"
-            filter="grayscale(100%)"
+            borderRadius="40%"
+            filter={{ base: "grayscale(0.2)", md: "grayscale(0.9)" }}
             boxShadow="rgba(10, 70, 110,0.5) 5px 5px, rgba(10, 70, 110, 0.3) 10px 10px, rgba(10, 70, 110, 0.2) 15px 15px, rgba(10, 70, 110, 0.1) 20px 20px, rgba(10, 70, 110, 0.05) 25px 25px;"
             _hover={{ filter: "grayscale(15%)" }}
           />
-          <Button
-            w={{ base: "100", lg: "80%", xl: "70%" }}
-            h="50px"
-            as={motion.button}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            variant="outline"
-            className="sf"
-            colorScheme="messenger"
-            _hover={{ fontWeight: "bold" }}
-            fontSize={{ base: "1rem", lg: "0.9rem", md: "1.2rem" }}
+          <a
+            href={language === "es" ? "cv.pdf" : "resume.pdf"}
+            download={language === "es" ? "cv" : "resume"}
           >
-            {data[language].aboutMe[4]}
-          </Button>
+            <Button
+              // w={{ base: "100", lg: "80%", xl: "70%" }}
+              w={{ base: "200px", md: "255px" }}
+              h="50px"
+              as={motion.button}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              variant="outline"
+              className="sf"
+              colorScheme="messenger"
+              _hover={{ fontWeight: "bold" }}
+              fontSize={{ base: "1rem", lg: "0.9rem", md: "1.2rem" }}
+            >
+              {data[language].aboutMe[4]}
+            </Button>
+          </a>
         </Flex>
       </Flex>
     </Flex>

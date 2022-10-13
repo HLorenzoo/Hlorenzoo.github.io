@@ -34,15 +34,17 @@ const arr = [
   react,
   redux,
   chakra,
+  mui,
   next2,
   sass,
-  npm,
+
   git,
 ];
 const Skills = ({ data }) => {
   const { language, setlanguage } = useAppContext();
   return (
     <Flex
+      id="skills"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
@@ -80,7 +82,7 @@ const Skills = ({ data }) => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 key={i}
-                filter="grayscale(0.9)"
+                filter={{ base: "grayscale(0.4)", md: "grayscale(0.9)" }}
                 transition="all .8s ease-in-out"
                 w={{ sm: "152px", m: "190px", md: "235px" }}
                 h={{ sm: "65px", m: "81px", md: "101px" }}
@@ -94,7 +96,7 @@ const Skills = ({ data }) => {
             );
           })}
         </Grid>
-        <Box
+        {/* <Box
           as={motion.div}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -107,7 +109,7 @@ const Skills = ({ data }) => {
           className="skills"
         >
           <Image src={mui} h={{ base: "70px", md: "118px", lg: "150px" }} />
-        </Box>
+        </Box> */}
       </Flex>
     </Flex>
   );

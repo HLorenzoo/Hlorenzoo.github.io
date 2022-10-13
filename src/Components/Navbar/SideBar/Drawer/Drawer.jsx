@@ -13,7 +13,7 @@ const DrawerSectionm = () => {
   function handleBackdropClick() {
     setDrawerOpen(false);
   }
-  console.log(drawerOpen);
+
   return (
     <div>
       <SlideDrawer show={drawerOpen} />

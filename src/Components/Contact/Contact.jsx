@@ -19,6 +19,7 @@ const Contact = ({ data }) => {
   const { language, setlanguage } = useAppContext();
   return (
     <Flex
+      id="contact"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
@@ -34,7 +35,7 @@ const Contact = ({ data }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="calibre"
-          fontSize={{ base: "2.8rem", md: "1.5rem" }}
+          fontSize={{ base: "2.8rem", md: "3rem" }}
           color="#19b1ff"
           fontWeight="extrabold"
         >
@@ -55,26 +56,35 @@ const Contact = ({ data }) => {
             ? "Estoy abierto a ofertas laborales o cualquier pregunta que pueda tener "
             : "I’m currently looking for a job opportunitie,my inbox is always open.I'm happy to answer any questions you may have.."}
         </Text>
-        <Button
-          display={{ base: "none", md: "block" }}
-          mt="20px"
-          mb="10px"
-          w={{ base: "100", md: "250px" }}
-          h="50px"
-          as={motion.button}
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -10, opacity: 0 }}
-          transition={{ duration: 0.2 }}
-          variant="outline"
-          className="sf"
-          colorScheme="messenger"
-          _hover={{ fontWeight: "bold" }}
-          fontSize={{ base: "1rem", lg: "0.9rem", md: "1.2rem" }}
+        <Link href="mailto:lorenzoestebanhernan@gmail.com" isExternal>
+          <Button
+            display={{ base: "none", md: "block" }}
+            mt="20px"
+            mb="10px"
+            w={{ base: "100", md: "250px" }}
+            h="50px"
+            as={motion.button}
+            transition="opacity 0.7s cubic-bezier(0.5, 0, 0, 1) 0.25s"
+            initial={{ opacity: 0.1 }}
+            whileInView={{ opacity: 1 }}
+            variant="outline"
+            className="sf"
+            colorScheme="messenger"
+            _hover={{ fontWeight: "bold" }}
+            fontSize={{ base: "1rem", lg: "0.9rem", md: "1.2rem" }}
+          >
+            {language === "es" ? "Saludame" : "Say Hello"}
+          </Button>
+        </Link>
+        <Flex
+          as={motion.div}
+          gap={4}
+          p={3}
+          display={{ base: "flex", md: "none" }}
+          transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.10s"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
         >
-          {language === "es" ? "Saludame" : "Say Hello"}
-        </Button>
-        <Flex gap={4} p={3} display={{ base: "flex", md: "none" }}>
           <Box
             filter="grayscale(0.2)"
             cursor="pointer"
@@ -150,7 +160,9 @@ const Contact = ({ data }) => {
             cursor="pointer"
             _hover={{ color: "#19b1ff" }}
           >
-            Desinged & developed by Hernan Lorenzo
+            {language === "es"
+              ? "Diseñado y desarrolado por Hernan Lorenzo"
+              : " Designed & developed by Hernan Lorenzo"}
           </Text>
         </Link>
       </Flex>

@@ -65,7 +65,7 @@ function App() {
               animate={{ opacity: 1, scale: 1 }}
               transition="background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s"
             >
-              <Flex flexDirection="column" gap={2} mb="10px">
+              <Flex flexDirection="column" gap={4} mb="10px">
                 <Box
                   filter="grayscale(0.2)"
                   cursor="pointer"
