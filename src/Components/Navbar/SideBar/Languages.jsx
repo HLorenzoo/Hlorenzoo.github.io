@@ -5,7 +5,7 @@ import { World } from "../../../assets/icons/Icon";
 const Languages = () => {
   return (
     <Tooltip label="Idiomas/Languages">
-      <Flex alingItems="center" position="relative" w="35px" cursor="pointer">
+      <Flex  position="relative" w="35px" cursor="pointer">
         <svg
           width="30px"
           height="30px"

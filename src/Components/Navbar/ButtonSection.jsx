@@ -27,7 +27,7 @@ import DrawerLanguages from "./SideBar/DrawerLanguages";
 
 const ButtonSection = ({ data }) => {
   const { language, setlanguage } = useAppContext();
-  console.log(language);
+
   return (
     <Stack
       direction={"row"}

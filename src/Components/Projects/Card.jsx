@@ -13,17 +13,17 @@ const Card = ({ description, img, image, tecnologias, proyecto, link }) => {
       initial={{ opacity: 0.1 }}
       whileInView={{ opacity: 1 }}
     >
-      <a class="card">
+      <a className="card">
         <Image className="card__image" src={image} />
 
-        <div class="card__overlay">
-          <div class="card__header">
-            {/* <div class="card__thumb">
+        <div className="card__overlay">
+          <div className="card__header">
+            {/* <div className="card__thumb">
               <Logo />
             </div> */}
 
-            <div class="card__header-text">
-              <h3 class="card__title">{proyecto}</h3>
+            <div className="card__header-text">
+              <h3 className="card__title">{proyecto}</h3>
               <Box
                 w="20%"
                 alignItems="center"
@@ -39,7 +39,7 @@ const Card = ({ description, img, image, tecnologias, proyecto, link }) => {
                   <Image src={img} w="33px" h="33px" />
                 </Link>
               </Box>
-              <span class="card__status">
+              <span className="card__status">
                 {language === "es" ? "Desarrollado con :" : "Developed with"}
                 <Text
                   color="rgba(24, 176, 255)"
@@ -51,7 +51,7 @@ const Card = ({ description, img, image, tecnologias, proyecto, link }) => {
               </span>
             </div>
           </div>
-          <p class="card__description">{description}</p>
+          <p className="card__description">{description}</p>
         </div>
       </a>
     </Box>
