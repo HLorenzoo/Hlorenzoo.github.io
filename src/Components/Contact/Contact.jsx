@@ -27,7 +27,7 @@ const Contact = ({ data }) => {
       bgColor="#0e1015"
       mt="45px"
     >
-      <TitleSection data={data} n={5} />
+      <TitleSection data={data} n={4} />
       <Flex flexDirection="column" alignItems="center" justifyContent="center">
         <Text
           as={motion.h1}

@@ -16,7 +16,7 @@ const TitleSection = ({ data, n }) => {
       whileInView={{ opacity: 1 }}
     >
       <Text color="#19b1ff" fontSize={{ base: "0.9rem", md: "1.1rem" }}>
-        0.{n}
+        0.{n+1}
       </Text>
       <Text
         color="white"

@@ -18,7 +18,7 @@ const AboutMe = ({ data }) => {
       mt="65px"
       mb="65px"
     >
-      <TitleSection data={data} n={2} />
+      <TitleSection data={data} n={1} />
       <Flex
         alignItems="center"
         justifyContent="center"

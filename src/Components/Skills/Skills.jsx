@@ -53,7 +53,7 @@ const Skills = ({ data }) => {
       mt="45px"
       mb={{ md: "45px" }}
     >
-      <TitleSection data={data} n={4} />
+      <TitleSection data={data} n={3} />
       <Flex
         w="100%"
         alignItems="center"
