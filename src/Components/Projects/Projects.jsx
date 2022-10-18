@@ -27,7 +27,7 @@ const Projects = ({ data }) => {
       mt="45px"
       mb="45px"
     >
-      <TitleSection data={data} n={2} />
+      <TitleSection data={data} n={3} />
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", xl: "repeat(2, 1fr)" }}
         gap={{ base: "4", sm: "8", md: "10", lg: "12" }}
