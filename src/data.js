@@ -37,7 +37,7 @@ const data = {
           name: "WOW Magazine",
           path: "/assets/images/revistaWOW.png",
           linkGit: "#home",
-          linkWeb: "https://p5-wow-git-develop-joaquinreiners.vercel.app/",
+          linkWeb: "https://magazine-wow.vercel.app/",
           description:
             "Group project for Hogarth WorldWide developing a web page for a female oriented magazine. The site has completly dynamic desing and allsections can be laid ouy according to editorial needs.Development and Ux/UI design of an interactive widget,connecting the user's chosen emotion with recommended articles",
           skills: ["Strapi", "MongoDB", "Next.js", "ChakraUI"],
@@ -100,7 +100,7 @@ const data = {
           name: "Revista WOW",
           path: "/assets/images/revistaWOW.png",
           linkGit: "#home",
-          linkWeb: "https://p5-wow-git-develop-joaquinreiners.vercel.app/",
+          linkWeb: "https://magazine-wow.vercel.app/",
           description:
             "Proyecto profesional para Hogarth WorldWide.Desarrollo de una Aplicación Web de tipo prensa, portal de noticias, en un equipo SCRUM de 5 integrantes, donde todo el contenido es editable y dinámico a través de un CMS sobre Strapi y MongoDB.",
           skills: ["Strapi", "MongoDB", "Next.js", "ChakraUI"],
