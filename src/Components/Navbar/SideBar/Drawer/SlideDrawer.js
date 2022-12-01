@@ -3,10 +3,12 @@ import React from "react";
 import "./SlideDrawer.css";
 import { motion, isValidMotionProp, AnimatePresence } from "framer-motion";
 import useAppContext from "../../../../context/context";
+import data from "../../../../data";
 
 const SlideDrawer = ({ show }) => {
   let drawerClasses = show ? "side-drawer open" : "side-drawer";
   const { language, setlanguage } = useAppContext();
+  
   return (
     <AnimatePresence>
       {show && (
@@ -34,7 +36,7 @@ const SlideDrawer = ({ show }) => {
                 <small style={{ color: "#19b1ff", fontSize: "13px" }}>
                   0.1{" "}
                 </small>
-                <p style={{ color: "white" }}>Home</p>
+                <p style={{ color: "white" }}>{data[language].navbar[0]}</p>
               </button>
             </Link>
             <Link href="#aboutme">
@@ -45,7 +47,18 @@ const SlideDrawer = ({ show }) => {
                 <small style={{ color: "#19b1ff", fontSize: "13px" }}>
                   0.2{" "}
                 </small>
-                <p style={{ color: "white" }}>About</p>
+                <p style={{ color: "white" }}>{data[language].navbar[1]}</p>
+              </button>
+            </Link>
+            <Link href="#experiencia">
+              <button
+                className="hvr-underline-from-left"
+                style={{ width: "200px" }}
+              >
+                <small style={{ color: "#19b1ff", fontSize: "13px" }}>
+                  0.3{" "}
+                </small>
+                <p style={{ color: "white" }}>{data[language].navbar[2]}</p>
               </button>
             </Link>
             <Link href="#proyectos">
@@ -54,9 +67,9 @@ const SlideDrawer = ({ show }) => {
                 style={{ width: "200px" }}
               >
                 <small style={{ color: "#19b1ff", fontSize: "13px" }}>
-                  0.3
+                  0.4
                 </small>
-                <p style={{ color: "white" }}>Skills</p>
+                <p style={{ color: "white" }}>{data[language].navbar[3]}</p>
               </button>
             </Link>
             <Link href="#skills">
@@ -65,9 +78,9 @@ const SlideDrawer = ({ show }) => {
                 style={{ width: "200px" }}
               >
                 <small style={{ color: "#19b1ff", fontSize: "13px" }}>
-                  0.4
+                  0.5
                 </small>
-                <p style={{ color: "white" }}>Projects</p>
+                <p style={{ color: "white" }}>{data[language].navbar[4]}</p>
               </button>
             </Link>
             <Link href="#contact">
@@ -76,12 +89,15 @@ const SlideDrawer = ({ show }) => {
                 style={{ width: "200px" }}
               >
                 <small style={{ color: "#19b1ff", fontSize: "13px" }}>
-                  0.5
+                  0.6
                 </small>
-                <p style={{ color: "white" }}>Contact</p>
+                <p style={{ color: "white" }}>{data[language].navbar[5]}</p>
               </button>
             </Link>
-            <a href={language === "es" ? "cv.pdf" : "resume.pdf"} download={language === "es" ? "cv" : "resume"} >
+            <a
+              href={language === "es" ? "cv.pdf" : "resume.pdf"}
+              download={language === "es" ? "cv" : "resume"}
+            >
               <Button w="150px" colorScheme="linkedin" variant="outline">
                 CV
               </Button>

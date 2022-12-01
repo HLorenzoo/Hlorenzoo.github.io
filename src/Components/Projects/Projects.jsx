@@ -3,6 +3,7 @@ import React from "react";
 import useAppContext from "../../context/context";
 import TitleSection from "../AboutMe/TitleSection";
 import portfolio from "../../assets/images/portfolio.png";
+import prode from "../../assets/images/prode.png";
 import wow from "../../assets/images/wow.png";
 import tmdb from "../../assets/images/tmdb.png";
 import ecom from "../../assets/images/ecom.png";
@@ -18,7 +19,6 @@ const Projects = ({ data }) => {
 
   return (
     <Flex
-      id="proyectos"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
@@ -26,8 +26,30 @@ const Projects = ({ data }) => {
       bgColor="#0e1015"
       mt="45px"
       mb="45px"
+      id="experiencia"
     >
-      <TitleSection data={data} n={2} />
+      <Flex
+        mt="45px"
+        flexDir="column"
+        alignItems="center"
+        justifyContent="center"
+        mb="45px"
+        gap={20}
+        width={{ base: "85vw", md: "80vw" }}
+      >
+        <TitleSection data={data} n={2} />
+
+        <Card
+          img={click}
+          image={prode}
+          proyecto="Prode B&G"
+          tecnologias="ChakraUI - ReactJS - FramerMotion - AWS - NodeJS - Express - Redux - JWT"
+          description={data[language].projects.projects[4].description}
+          link={data[language].projects.projects[4].linkWeb}
+        />
+      </Flex>
+      <div id="proyectos"></div>
+      <TitleSection data={data} n={3} />
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", xl: "repeat(2, 1fr)" }}
         gap={{ base: "4", sm: "8", md: "10", lg: "12" }}
@@ -39,28 +61,32 @@ const Projects = ({ data }) => {
         mb={{ base: "6rem", md: "8rem" }}
         width={{ base: "85vw", md: "80vw" }}
       >
-        <Card img={github}
+        <Card
+          img={github}
           image={portfolio}
           proyecto="Portfolio"
           tecnologias="ChakraUI - ReactJS - FramerMotion"
           description={data[language].projects.projects[0].description}
           link={data[language].projects.projects[0].linkGit}
         />
-        <Card img={click}
+        <Card
+          img={click}
           link={data[language].projects.projects[1].linkWeb}
           image={wow}
           proyecto={data[language].projects.projects[1].name}
           tecnologias="ChakraUI - ReactJS - NextJS - Strapi"
           description={data[language].projects.projects[1].description}
         />
-        <Card img={github}
+        <Card
+          img={github}
           link={data[language].projects.projects[2].linkGit}
           image={ecom}
           proyecto={data[language].projects.projects[2].name}
           tecnologias="MongoDB - Express - NodeJS - ReactJS - Redux - MUI - JWT"
           description={data[language].projects.projects[2].description}
         />
-        <Card img={github}
+        <Card
+          img={github}
           link={data[language].projects.projects[3].linkGit}
           image={tmdb}
           proyecto={data[language].projects.projects[3].name}

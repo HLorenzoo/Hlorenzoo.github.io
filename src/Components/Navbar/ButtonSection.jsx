@@ -37,11 +37,12 @@ const ButtonSection = ({ data }) => {
     >
       <DrawerLanguages />
 
-      <CustomButton id='#inicio' n={0.1} name={data[language].navbar[0]} />
-      <CustomButton id='#aboutme' n={0.2} name={data[language].navbar[1]} />
-      <CustomButton id='#proyectos' n={0.3} name={data[language].navbar[2]} />
-      <CustomButton id='#skills' n={0.4} name={data[language].navbar[3]} />
-      <CustomButton id='#contact' n={0.5} name={data[language].navbar[4]} />
+      <CustomButton id="#inicio" n={0.1} name={data[language].navbar[0]} />
+      <CustomButton id="#aboutme" n={0.2} name={data[language].navbar[1]} />
+      <CustomButton id="#experiencia" n={0.3} name={data[language].navbar[2]} />
+      <CustomButton id="#proyectos" n={0.4} name={data[language].navbar[3]} />
+      <CustomButton id="#skills" n={0.5} name={data[language].navbar[4]} />
+      <CustomButton id="#contact" n={0.6} name={data[language].navbar[5]} />
     </Stack>
   );
 };

@@ -1,6 +1,6 @@
 const data = {
   en: {
-    navbar: ["Home", "About me", "Projects", "Skills", "Contact"],
+    navbar: ["Home", "About me", "Experience", "Projects", "Skills", "Contact"],
     init: [
       "Hello World! My name is",
       "Hernan Lorenzo.",
@@ -58,11 +58,27 @@ const data = {
           description: "Individual project for one week.",
           skills: ["Node.js", "MongoDB", "React.js", "SASS"],
         },
+        {
+          name: "Prode B&G",
+          path: "/assets/images/prode.png",
+          linkGit: "#experiencia",
+          linkWeb: "https://prodeargentino.club/",
+          description:
+            "Project for gas station, realization of a prode in order to retain the customer with the world cup, consists of user creation, match predictions, points system, developed in the aws environment.",
+          skills: ["Strapi", "MongoDB", "Next.js", "ChakraUI"],
+        },
       ],
     },
   },
   es: {
-    navbar: ["Inicio", "Sobre mí", "Proyectos", "Tecnologías", "Contacto"],
+    navbar: [
+      "Inicio",
+      "Sobre mí",
+      "Experiencia",
+      "Proyectos",
+      "Tecnologías",
+      "Contacto",
+    ],
     init: [
       "Hola, mi nombre es",
       "Hernan Lorenzo.",
@@ -120,6 +136,15 @@ const data = {
           linkGit: "https://github.com/HLorenzoo/TMDB",
           description: "Proyecto individual durante una semana.",
           skills: ["Node.js", "MongoDB", "React.js", "SASS"],
+        },
+        {
+          name: "Prode B&G",
+          path: "/assets/images/prode.png",
+          linkGit: "#experiencia",
+          linkWeb: "https://prodeargentino.club/",
+          description:
+            "Proyecto para estacion de servicio, realizacion de un prode con el finde fidelizar al cliente con el mundial, consta de creacion de usuario, predicciones de partidos, sistema de puntos,desarrollado en el entorno de aws.",
+          skills: ["Strapi", "MongoDB", "Next.js", "ChakraUI"],
         },
       ],
     },

@@ -13,6 +13,9 @@ const DrawerSectionm = () => {
   function handleBackdropClick() {
     setDrawerOpen(false);
   }
+  window.onclick = function (e) {
+    e.screenY > 250 && setDrawerOpen(!drawerOpen);
+  };
 
   return (
     <div>
@@ -25,6 +28,7 @@ const DrawerSectionm = () => {
           right={30}
           color="#05acff"
           duration={1}
+          toggled={drawerOpen}
         />
       </button>
     </div>
