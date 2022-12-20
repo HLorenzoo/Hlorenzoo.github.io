@@ -5,10 +5,10 @@ import { motion, isValidMotionProp, AnimatePresence } from "framer-motion";
 import useAppContext from "../../../../context/context";
 import data from "../../../../data";
 
-const SlideDrawer = ({ show }) => {
+const SlideDrawer = ({ show, setDrawerOpen }) => {
   let drawerClasses = show ? "side-drawer open" : "side-drawer";
   const { language, setlanguage } = useAppContext();
-  
+
   return (
     <AnimatePresence>
       {show && (

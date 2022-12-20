@@ -14,12 +14,12 @@ const DrawerSectionm = () => {
     setDrawerOpen(false);
   }
   window.onclick = function (e) {
-    e.screenY > 250 && setDrawerOpen(!drawerOpen);
+    e.screenY > 250 && setDrawerOpen(false);
   };
 
   return (
     <div>
-      <SlideDrawer show={drawerOpen} />
+      <SlideDrawer show={drawerOpen} setDrawerOpen={setDrawerOpen} />
       {/* {drawerOpen && <Backdrop closeDrawer={handleBackdropClick} />} */}
       <button onClick={handleOpenDrawerButton}>
         <Hamburger
